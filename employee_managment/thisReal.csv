@@ -1,0 +1,11 @@
+EmpID,EmpName,StartTime,EndTime,ShiftTime
+001,Dev Patel,07:00,18:00,660
+002,Guido Rossum,07:00,12:00,300
+003,John Weak,07:00,14:00,350
+001,Dev Patel,07:00,20:00,780
+002,Guido Rossum,07:00,12:00,350
+003,John Weak,07:00,14:00,350
+001,Dev Patel,07:00,17:00,660
+002,Guido Rossum,07:00,12:00,300
+003,John Weak,07:00,14:00,350
+004,BOB,07:00,,N/A
