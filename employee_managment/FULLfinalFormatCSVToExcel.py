@@ -57,13 +57,13 @@ appendingIntoArr(startTimeArr,startTime)
 print("comment : startTime : endTime")
 def is_space(start,end):
     if (start and end) is None:
-        print (f"this is a spacing, so no color : {start} : {end}")
+        pass
         
 def is_blank(start,end,cell):
     if (start is not None) and (end is None):
         sheet[f'D{cell}'].fill = redFill
     else:
-        print(f"no color : {start} : {end}")
+        pass
 
 for i in range(len(endTimeArr)-1):  
     cell = i + 2 
