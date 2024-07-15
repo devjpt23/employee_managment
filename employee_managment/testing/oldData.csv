@@ -1,0 +1,5 @@
+EmpID,EmpName,StartTime,EndTime,ShiftTime
+1,kevin hart,07:00,18:00,660
+1,kevin hart,07:00,,N/A
+1,kevin hart,07:00,19:00,670
+2,Dwayne Johnson,07:00,20:00,680

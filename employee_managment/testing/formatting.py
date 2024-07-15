@@ -3,17 +3,18 @@ from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 
 empDict = {}
-readFile = pd.read_csv("C:\\Users\\25470\\Desktop\\MEETINGS\\meeting one fixing\\thisReal.csv")
+readFile = pd.read_csv("C:\\Users\\25470\\Desktop\\EMPLOYEE_MANAGMENT\\employee_managment\\testing\\oldData.csv")
 redFill = PatternFill(patternType="solid", fgColor='C64747')
 
-def creatingDict():
-    for i in readFile._values:
-        if i[1] in empDict:
-            empDict[i[1]].append(i)
+def creatingDict(name,dictName):
+    for i in name._values:
+        if i[1] in dictName:
+            dictName[i[1]].append(i)
         else:
-            empDict[i[1]] = []
-            empDict[i[1]].append(i)            
-creatingDict()
+            dictName[i[1]] = []
+            dictName[i[1]].append(i)   
+
+creatingDict(readFile,empDict)
 
 data = []
 hoursPlacement = []
@@ -31,11 +32,14 @@ for key, value  in empDict.items():
 columns = readFile.columns  
 df = pd.DataFrame(data, columns=columns)
 
+# print(df)
+
 output_file = 'eachEmp.xlsx'
 df.to_excel(output_file, index=False, engine='openpyxl')
 
 workbook = load_workbook('eachEmp.xlsx')
 sheet = workbook.active
+
 for i in hoursPlacement:
     sheet[f'F{i}'] = (f"=E{i}/60")
 
