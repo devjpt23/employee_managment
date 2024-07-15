@@ -57,16 +57,20 @@ def appendingIntoArr(arrName,columnName):
 appendingIntoArr(endTimeArr,endTime)
 appendingIntoArr(startTimeArr,startTime)
 
-print("comment : startTime : endTime")
+
 def is_space(start,end):
     if (start and end) is None:
         pass
         
-def is_blank(start,end,cell):
-    if (start is not None) and (end is None):
+def is_blank(start, end, cell):
+    print(f"Checking cell {cell}: start={start}, end={end}")
+    if start is not None and end is None:
         sheet[f'D{cell}'].fill = redFill
-    else:
-        pass
+        return True
+    return False
+
+
+
 
 for i in range(len(endTimeArr)-1):  
     cell = i + 2 
